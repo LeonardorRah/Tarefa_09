@@ -31,7 +31,7 @@ body {
     margin: 0 15px;
     font-size: 1.1rem;
 }
-.header__items .header__links {
+.header__links {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
@@ -39,7 +39,7 @@ body {
   padding-bottom: 3px;
 }
 
-.header__items .header__links:after {
+.header__links:after {
   content: '';
   position: absolute;
   width: 0;
@@ -50,11 +50,11 @@ body {
   transition: width 0.3s ease;
 }
 
-.header__items .header__links:hover:after {
+.header__links:hover:after {
   width: 100%;
 }
 
-.header__items .header__links:hover {
+.header__links:hover {
   color: white;
 }
 /* Home */
@@ -75,15 +75,15 @@ body {
  height: 100%;
  width: 70%;
 }
-.home__overlay .home__title {
+.home__title {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-.home__overlay .home__line {
+.home__line {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
-.home__overlay .home__button {
+.home__button {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -94,7 +94,7 @@ body {
     transition: background-color 0.3s ease;
     width: 50%;
 }
-.home__overlay .home__button:hover {
+.home__button:hover {
     background-color: #ff6347;
 }
 /* About Us */
@@ -115,15 +115,15 @@ body {
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.about__content .about__title {
+.about__title {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
 }
-.about__content .about__line {
+.about__line {
     font-size: 1.8rem;
     line-height: 2.0;
 }
-.about__content .about__button {
+.about__button {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -134,7 +134,7 @@ body {
     transition: background-color 0.3s ease;
     margin-top: 2.5rem;
 }
-.about__content .about__button:hover {
+.about__button:hover {
     background-color: #ff6347;
 }
 /* Serviços */
