@@ -10,28 +10,28 @@ body {
     margin: auto;
 }
 /* Headers */
-header {
+.header {
     background-color: #727272;
     color: white;
     padding: 10px 0;
 }
-nav .logo {
+.header__logo {
     font-size: 1.5rem;
     font-weight: bold;
     cursor: default;
 }
-nav {
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav .nav-links a {
+.header__nav .header__items .header__links {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1rem;
 }
-.nav-links a {
+.header__items .header__links {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
@@ -39,7 +39,7 @@ nav .nav-links a {
   padding-bottom: 3px;
 }
 
-.nav-links a:after {
+.header__items .header__links:after {
   content: '';
   position: absolute;
   width: 0;
@@ -50,15 +50,15 @@ nav .nav-links a {
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover:after {
+.header__items .header__links:hover:after {
   width: 100%;
 }
 
-.nav-links a:hover {
+.header__items .header__links:hover {
   color: white;
 }
 /* Home */
-#home {
+.home {
     color: white;
     display: flex;
     background: #202125;
@@ -66,24 +66,24 @@ nav .nav-links a {
     align-items: center;
     justify-content: center;  
 }
-#home .logo-image {
+.logo__image {
     width: 500px;
     height: auto;
     margin-right: 4rem;
 }
-.overlay {
+.home__overlay {
  height: 100%;
  width: 70%;
 }
-.overlay h2 {
+.home__overlay .home__title {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-.overlay p {
+.home__overlay .home__line {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
-.overlay button {
+.home__overlay .home__button {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -94,11 +94,11 @@ nav .nav-links a {
     transition: background-color 0.3s ease;
     width: 50%;
 }
-.overlay button:hover {
+.home__overlay .home__button:hover {
     background-color: #ff6347;
 }
 /* About Us */
-#about {
+.about {
     background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
     color: white;
     width: 100vw;
@@ -106,24 +106,24 @@ nav .nav-links a {
     display: flex;
     align-items: center;
 }
-.SobreNos {
+.about__content {
     background: rgba(0, 0, 0, 0.8);
-    padding: 50px;
-    border-radius: 10px;
+    padding: 5rem;
+    border-radius: 2rem;
     max-width: 80vw;
     margin: auto;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.SobreNos h2 {
+.about__content .about__title {
     font-size: 3.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
-.SobreNos p {
+.about__content .about__line {
     font-size: 1.8rem;
     line-height: 2.0;
 }
-.SobreNos button {
+.about__content .about__button {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -132,22 +132,22 @@ nav .nav-links a {
     cursor: pointer;
     border-radius: 1rem;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 2.5rem;
 }
-.SobreNos button:hover {
+.about__content .about__button:hover {
     background-color: #ff6347;
 }
 /* Serviços */
-.container {
-    height: 100vh;
-    width: 100vw;
+.servicos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100vw;
 }
-.service-item{
+ .servicos__item{
     background: rgb(212, 152, 152);
     padding: 1rem 2rem;
     margin: 1rem;
@@ -156,68 +156,71 @@ nav .nav-links a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 20vw;
     text-align: center;
+    justify-content: center;    
     color: #333;
-    text-decoration: none;
 }
-.service-list {
-    display: flex;
+.servicos__title{
+    text-align: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    grid-column: 1 / 4;
-    grid-row: 2 / 4;
-}
-.container {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    text-align: center;
-}
-.Servicos h2{
-    text-align: center;
     font-size: 3rem;
     margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin-bottom: 5rem;    
     color: #ffffff;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
 }
-.service-item h1{
+.servicos__list {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.servicos__subtitle{
     font-size: 2rem;
     margin-bottom: 1rem;
 }
-.service-item p {
+.servicos__line {
     font-size: 1.5rem;
 }
-.service-item:hover {
+.servicos__item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.Servicos button {
+.servicos__button--align {
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+.servicos__button {
     background-color: #ff7f50;
     color: white;
     border: none;
-    padding: 1rem 2rem;
     font-size: 1.1rem;
     cursor: pointer;
     border-radius: 1rem;
     transition: background-color 0.3s ease;
-    margin-top: 4rem;
     width: 30%;
+    padding: 1rem 2rem;
+
 }
-.Servicos button:hover {
+.servicos__button:hover {
     background-color: #ff6347;
 }
 /* Depoimentos */
-#reviews {
+.reviews {
     background-color: #202125;
     color: white;
     padding: 1rem 2rem;
     text-align: center;
 }
-#reviews h2 {
+.reviews__title {
     font-size: 2.5rem;
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
-#reviews blockquote {
+.reviews__item {
     font-size: 1.2rem;
     font-style: italic;
     margin: 0 auto 20px auto;
@@ -225,7 +228,7 @@ nav .nav-links a {
     line-height: 1.6;
     position: relative;
 }
-#reviews blockquote:before {
+.reviews__item:before {
     content: "“";
     font-size: 4rem;
     position: absolute;
@@ -233,7 +236,7 @@ nav .nav-links a {
     top: -20px;
     color: #ff7f50;
 }
-#reviews blockquote:after {
+.reviews__item:after {
     content: "”";
     font-size: 4rem;
     position: absolute;
@@ -241,13 +244,13 @@ nav .nav-links a {
     bottom: -50px;
     color: #ff7f50;
 }
-#reviews cite {
+.reviews cite {
     display: block;
     margin-top: 10px;
     font-size: 1rem;
     color: #ff7f50;
 }
-#reviews button {
+.reviews__button {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -259,11 +262,11 @@ nav .nav-links a {
     margin-top: 20px;
     width: 30%;
 }
-#reviews button:hover {
+.reviews__button:hover {
     background-color: #ff6347;
 }
 /* Contato */
-#contact {
+.contact {
     color: white;
     padding: 1rem 2rem;
     text-align: center;
@@ -278,18 +281,18 @@ nav .nav-links a {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     margin-top: 10rem;
 }
-#contact h2 {
+.contact__title {
     font-size: 2.5rem;
     margin-bottom: 5rem;
 }
-form {
+.contact__form {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-form label {
+.contact__label {
     font-size: 1.2rem;
     text-align: left;
 }
@@ -300,7 +303,7 @@ form input, form textarea {
     border-radius: 5px;
     width: 100%;
 }
-form button {
+.contact__button {
     background-color: #ff7f50;
     color: white;
     border: none;
@@ -312,11 +315,11 @@ form button {
     margin-top: 2px;
     width: 30%;
 }
-form button:hover {
+.contact__button:hover {
     background-color: #ff6347;
 }
 /* Footer */
-footer {
+.footer {
     background-color: #727272;
     color: white;
     text-align: center;
@@ -326,108 +329,122 @@ footer {
     width: 100%;
     margin-top: 10rem;
 }
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
+@media (max-width: 1500px) {
+    .servicos__list {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
     }
-    nav {
-        align-items: center;
+    .servicos {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
-    #home {
-        flex-direction: column;
-        text-align: center;
-    }
-    #home .logo-image {
-        width: 80%;
-        margin: 0 0 2rem 0;
-    }
-    .overlay {
-        width: 90%;
-    }
-    .container {
+    .servicos {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         height: auto;
     }
-    .service-item {
+        .servicos__item {
         width: 80%;
         margin: 1rem auto;
     }
-    .service-list {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
+}
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
     }
-    .container {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+    .header__nav {
+        align-items: center;
     }
-    #reviews h2 {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo__image {
+        width: 80%;
+        margin: 0 0 2rem 0;
+    }
+    .home__overlay {
+        width: 90%;
+    }
+    .reviews__title {
         font-size: 2rem;
         margin-top: 5rem;
         margin-bottom: 3rem;
     }
-    #reviews button, .Servicos button, form button {
+    .reviews__button, .servicos__button, .contact__button {
         width: 80%;
     }
-    .SobreNos h2 {
+    .about {
+        width: auto;
+        height: auto;
+    }
+    .about__title {
         font-size: 2.5rem;
     }
-    .SobreNos p {
+    .about__line {
         font-size: 1.2rem;
     }
-    #contact h2 {
+    .contact__title {
         font-size: 2rem;
         margin-bottom: 3rem;
     }
 }
 @media (max-width: 480px) {
-    .overlay h2 {
+    .home__title {
         font-size: 1.8rem;
     }
-    .overlay p {
+    .home__line {
         font-size: 1rem;
     }
-    .overlay button {
+    .home__button {
         width: 70%;
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
     }
-    .SobreNos h2 {
+    .about {
+        width: auto;
+        height: auto;
+    }
+    .about__title {
         font-size: 2rem;
     }
-    .SobreNos p {
+    .about__line {
         font-size: 1rem;
     }
-    .service-item h1 {
+    .servicos__subtitle {
         font-size: 1.5rem;
     }
-    .service-item p {
+    .servicos__line {
         font-size: 1.2rem;
     }
 }
 @media (max-width: 360px) {
-    .overlay h2 {
+    .home__title {
         font-size: 1.5rem;
     }
-    .overlay p {
+    .home__line {
         font-size: 0.9rem;
     }
-    .overlay button {
+    .home__button {
         width: 90%;
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
     }
-    .SobreNos h2 {
+    .about {
+        width: auto;
+        height: auto;
+    }
+    .about__title {
         font-size: 1.5rem;
     }
-    .SobreNos p {
+    .about__line {
         font-size: 0.9rem;
     }
-    .service-item h1 {
+    .servicos__subtitle {
         font-size: 1.2rem;
     }
-    .service-item p {
+    .servicos__line {
         font-size: 1rem;
     }
 }

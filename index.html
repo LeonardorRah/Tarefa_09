@@ -7,88 +7,88 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Agência de marketing</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">Sobre Nós</a>
-                <a href="#container">Serviços</a>
-                <a href="#reviews">Depoimentos</a>
-                <a href="#contact">Contato</a>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">Agência de marketing</div>
+            <div class="header__items">
+                <a class="header__links" href="#home">Home</a>
+                <a class="header__links" href="#about">Sobre Nós</a>
+                <a class="header__links" href="#container">Serviços</a>
+                <a class="header__links" href="#reviews">Depoimentos</a>
+                <a class="header__links" href="#contact">Contato</a>
             </div>
         </nav>
     </header>
-    <div id="home">
-        <div class="overlay">
-        <h2>Deixe sua marca conhecida com nossa empresa</h2>
-        <p>Oferecemos soluções inovadoras para impulsionar seu negócio online.</p>
-        <button>Entrar em contato</button>
+    <div class="home">
+        <div class="home__overlay">
+        <h2 class="home__title">Deixe sua marca conhecida com nossa empresa</h2>
+        <p class="home__line">Oferecemos soluções inovadoras para impulsionar seu negócio online.</p>
+        <button class="home__button">Entrar em contato</button>
         </div>
         <img 
-            src="./assets/LogoM.jpg" alt="Logo da Agência" class="logo-image"
+            src="./assets/LogoM.jpg" alt="Logo da Agência" class="logo__image"
             srcset="
                 ./assets/LogoES.jpg 300w,
                 ./assets/LogoS.jpg 600w,">
     </div>
-    <section id="about">
-        <div class="SobreNos">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma equipe dedicada a ajudar empresas a crescerem através do marketing digital.</p>
-            <p>Nossa missão é entregar resultados mensuráveis e estratégias personalizadas.</p>
-            <p>Com anos de experiência, estamos prontos para levar seu negócio ao próximo nível.</p>
-            <button>Conheça Nossa Equipe</button>
+    <section class="about">
+        <div class="about__content">
+            <h2 class="about__title">Sobre Nós</h2>
+            <p class="about__line">Somos uma equipe dedicada a ajudar empresas a crescerem através do marketing digital.</p>
+            <p class="about__line">Nossa missão é entregar resultados mensuráveis e estratégias personalizadas.</p>
+            <p class="about__line">Com anos de experiência, estamos prontos para levar seu negócio ao próximo nível.</p>
+            <button class="about__button">Conheça Nossa Equipe</button>
         </div>
     </section>
-    <div id="container">
-        <div class="Servicos">
-        <h2>Cofira os Nossos Serviços</h2>
-        <div class="service-list">
-            <div class="service-item"><h1>Design Gráfico</h1>
-                <p>Criação de logotipos, banners e materiais promocionais.</p>
+    <div class="container">
+        <div class="servicos">
+        <h2 class="servicos__title">Cofira os Nossos Serviços</h2>
+        <div class="servicos__list">
+            <div class="servicos__item"><h1 class="servicos__subtitle">Design Gráfico</h1>
+                <p class="servicos__line">Criação de logotipos, banners e materiais promocionais.</p>
             </div>
-            <div class="service-item"><h1>Desenvolvimento Web</h1>
-                <p>Sites responsivos e lojas virtuais personalizadas.</p>
+            <div class="servicos__item"><h1 class="servicos__subtitle">Desenvolvimento Web</h1>
+                <p class="servicos__line">Sites responsivos e lojas virtuais personalizadas.</p>
             </div>
-            <div class="service-item"><h1>Consultoria de Marketing</h1>
-                <p>Estratégias de marketing digital adaptadas ao seu negócio.</p>
+            <div class="servicos__item"><h1 class="servicos__subtitle">Consultoria de Marketing</h1>
+                <p class="servicos__line">Estratégias de marketing digital adaptadas ao seu negócio.</p>
             </div>
         </div>
-        <button>Veja Todos os Serviços</button>
-        </div>  
+            <button class="servicos__button servicos__button--align">Veja Todos os Serviços</button>
+        </div>
     </div>
-    <section id="reviews">
-        <h2>Depoimentos</h2>
-        <blockquote>
+    <section class="reviews">
+        <h2 class="reviews__title">Depoimentos</h2>
+        <blockquote class="reviews__item">
             "A agência transformou nossa presença online!" - Cliente Satisfeito
         </blockquote>
-        <blockquote>
+        <blockquote class="reviews__item">
             "Resultados incríveis em pouco tempo." - Outro Cliente Satisfeito
         </blockquote>
-        <button>Leia Mais Depoimentos</button>
+        <button class="reviews__button">Leia Mais Depoimentos</button>
     </section>
-    <section id="contact">
+    <section class="contact">
         <div class="Contato">
-        <h2>Contato</h2>
-        <form>
-            <label for="name">Nome:</label>
+        <h2 class="contact__title">Contato</h2>
+        <form class="contact__form">
+            <label for="name" class="contact__label">Nome:</label>
             <input type="text" id="name" name="name" required>
             <br>
-            <label for="email">Email:</label>
+            <label for="email" class="contact__label">Email:</label>
             <input type="email" id="email" name="email" required>
             <br>
-            <label for="place">Endereço:</label>
+            <label for="place" class="contact__label">Endereço:</label>
             <input type="text" id="place" name="place" required>
-            <label for="telfone">Telefone:</label>
+            <label for="telfone" class="contact__label">Telefone:</label>
             <input type="text" id="telfone" name="telfone" required>
-            <label for="message">Mensagem:</label>
+            <label for="message" class="contact__label">Mensagem:</label>
             <textarea id="message" name="message" required></textarea>
             <br>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="contact__button">Enviar</button>
         </form>
         </div>
     </section>
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 Agência de Marketing Digital. Todos os direitos reservados.</p>
     </footer>
 </body>
